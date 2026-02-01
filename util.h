@@ -1,24 +1,12 @@
-#include <iostream> // cout
-#include "util.h"
-
-// g++ main.cpp util.cpp -o main
-int main(){
-    std::cout << "MCS-2026-PM\n";
-    int x = 20, y = 45, r;
-    float f1, f2, f3;
 
 // 1. Bernaola Gayoso - César Raúl
-
+// int addition(int a, int b);
 
 // 2. Cuadros-Vargas Ernesto
-    std::cout << "Demo Cuadros Vargas Ernesto" << std::endl;
-    x = 20, y = 45;
-    intercambiar(x, y);
-    std::cout << "x=" << x << " y=" << y << "\n\n";
+void intercambiar(int &a, int &b);
 
 // 3. Diaz Tapia Adderly
 // substraction
-    x = 5;
 
 // 4. Lopez Flores Royer Amed
 // multiplication
@@ -49,6 +37,6 @@ int main(){
 
 // 13. Vilca Aguilar Luis
 // root
-    
-    return 0;
-}
+
+// 14. Vinatea Chávez Camilo Jorge
+// power
