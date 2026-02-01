@@ -1,4 +1,5 @@
 #include <iostream> // cout
+#include <cstdlib>
 #include "util.h"
 
 // g++ main.cpp util.cpp -o main
@@ -8,7 +9,10 @@ int main(){
     float f1, f2, f3;
 
 // 1. Bernaola Gayoso - César Raúl
-
+    std::cout << "Demo Bernaola Gayoso Cesar" << std::endl;
+    x = 10, y = 30;
+    r = addition(x, y);
+    std::cout << "la suma de x=" << x << " y=" << y << " es: " << r << "\n\n";
 
 // 2. Cuadros-Vargas Ernesto
     std::cout << "Demo Cuadros Vargas Ernesto" << std::endl;
@@ -18,19 +22,30 @@ int main(){
 
 // 3. Diaz Tapia Adderly
 // substraction
-    x = 5;
+    std::cout << "Demo Adderly Díaz Tapia" << std::endl;
+    x = 10.1; y=7.2;
+    std::cout<<"La resta entre X e Y es: " << subtraction(x,y) << "\n\n";
 
 // 4. Lopez Flores Royer Amed
 // multiplication
-
+    std::cout << "Demo Lopez Flores Royer Amed" << std::endl;
+    x = 6; y = 7;
+    r = multiplicar(x, y);
+    std::cout << "multiplicar(" << x << "," << y << ")=" << r << "\n\n";
 // 5. López Sandoval, Heiner
 // division
 
 // 6. Mallaupoma Cesar
 // genera un numero aleatorio
+    std::cout << "Demo Cesar Mallaupoma Orellana" << std::endl;
+    srand(1);
+    int aleatorio = generarNumAleatorio();
+        std::cout << "El numero aleatorio generado es "<< aleatorio  << "\n\n";
 
 // 7. Miranda Zarate Jorge Luis
-// factorial
+    std::cout << "Demo Miranda Zarate Jorge" << std::endl;
+    x = 10;
+    std::cout << x << "! = " << factorial(x) << "\n\n";
 
 // 8. Riveros Guevara
 // IsPrime
@@ -44,6 +59,9 @@ int main(){
 
 // 9. Segovia Giancarlo
 // fibonacci
+    std::cout << "Demo Giancarlo Segovia" << std::endl;
+    x = 6;
+    std::cout << "Fibonacci de " << x << " es " << fibonacci(x) << "\n\n";
 
 // 10. Suarez Maciel Susana Isabel
 // average()
@@ -56,6 +74,6 @@ int main(){
 
 // 13. Vilca Aguilar Luis
 // root
-    
+
     return 0;
 }
