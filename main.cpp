@@ -5,15 +5,16 @@
 // g++ main.cpp util.cpp -o main
 int main(){
     std::cout << "MCS-2026-PM\n";
-    long x = 20, y = 45, r, exponent;
+    IntParam p1, p2, p3;
+    int x = 20, y = 45, r, exponent;
     float f1, f2, f3, base, result;
     double d1, d2;
 
 // 1. Bernaola Gayoso - César Raúl
     std::cout << "Demo Bernaola Gayoso Cesar" << std::endl;
-    x = 10, y = 30;
-    r = addition(x, y);
-    std::cout << "la suma de x=" << x << " y=" << y << " es: " << r << "\n\n";
+    p1 = 10, p2 = 30;
+    p3 = addition(p1, p2);
+    std::cout << "la suma de x=" << p1 << " y=" << p2 << " es: " << p3 << "\n\n";
 
 // 2. Cuadros-Vargas Ernesto
     std::cout << "Demo Cuadros Vargas Ernesto" << std::endl;

@@ -3,11 +3,7 @@
 #include "util.h"
 
 // 1. Bernaola Gayoso - César Raúl
-long addition(long a, long b) { 
-    return a + b;
-}
-
-float addition(float a, float b){
+IntParam addition(IntParam a, IntParam b) { 
     return a + b;
 }
 

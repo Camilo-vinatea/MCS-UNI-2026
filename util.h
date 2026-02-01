@@ -1,8 +1,7 @@
 #include "types.h"
 
 // 1. Bernaola Gayoso - César Raúl
-long   addition(long a, long b);
-float addition(float a, float b);
+IntParam addition(IntParam a, IntParam b);
 
 // 2. Cuadros-Vargas Ernesto
 void intercambiar(T1 &a, T1 &b);
