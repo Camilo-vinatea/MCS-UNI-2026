@@ -15,7 +15,7 @@ using T1 = long;
 // 7. Miranda Zarate Jorge Luis
 
 // 8. Riveros Guevara
-
+using TH=int;
 // 9. Segovia Giancarlo
 
 // 10. Suarez Maciel Susana Isabel.
