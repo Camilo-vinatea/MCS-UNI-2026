@@ -19,11 +19,16 @@ int main(){
 
 // 3. Diaz Tapia Adderly
 // substraction
-    x = 5;
+    std::cout << "Demo Adderly Díaz Tapia" << std::endl;
+    x = 10.1; y=7.2;
+    std::cout<<"La resta entre X e Y es: " << subtraction(x,y) << "\n\n";
 
 // 4. Lopez Flores Royer Amed
 // multiplication
-
+    std::cout << "Demo Lopez Flores Royer Amed" << std::endl;
+    x = 6; y = 7;
+    r = multiplicar(x, y);
+    std::cout << "multiplicar(" << x << "," << y << ")=" << r << "\n\n";
 // 5. López Sandoval, Heiner
 // division
 
@@ -35,7 +40,9 @@ int main(){
         std::cout << "El numero aleatorio generado es "<< aleatorio  << "\n\n";
 
 // 7. Miranda Zarate Jorge Luis
-// factorial
+    std::cout << "Demo Miranda Zarate Jorge" << std::endl;
+    x = 10;
+    std::cout << x << "! = " << factorial(x) << "\n\n";
 
 // 8. Riveros Guevara
 // IsPrime

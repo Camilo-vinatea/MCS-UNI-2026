@@ -11,18 +11,32 @@ void intercambiar(int &a, int &b){
 }
 
 // 3. Diaz Tapia Adderly
-
+double subtraction (double n, double m){
+    return n-m;
+}
 // 4. Lopez Flores Royer Amed
-
+int multiplicar(int &a, int &b){
+    return a * b;
+}
 // 5. López Sandoval, Heiner
-
+float division(float &f1, float &f2)
+{
+    float f3 = f1 / f2 ;
+    return(f3) ;
+}
 // 6. Mallaupoma Cesar
 int generarNumAleatorio(){
     return rand() % 10;
 }
 
 // 7. Miranda Zarate Jorge Luis
-
+unsigned int factorial(unsigned int number){
+    unsigned int result = 1;
+    for(int i=number; i > 0; i--){
+        result *= i;
+    }
+    return result;
+}
 
 // 8. Riveros Guevara
 

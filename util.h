@@ -5,19 +5,21 @@
 void intercambiar(int &a, int &b);
 
 // 3. Diaz Tapia Adderly
-// substraction
+double subtraction (double n, double m);
 
 // 4. Lopez Flores Royer Amed
 // multiplication
-
+int multiplicar(int &a, int &b);
 // 5. López Sandoval, Heiner
 // division
+float division(float &f1, float &f2);
 
 // 6. Mallaupoma Cesar
 // genera un numero aleatorio
 int generarNumAleatorio();
 
 // 7. Miranda Zarate Jorge Luis
+unsigned int factorial(unsigned int number);
 // factorial
 
 // 8. Riveros Guevara
