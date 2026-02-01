@@ -44,6 +44,16 @@ int main(){
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
 
+int suma = 0;
+    std::cout<<"Ingrese el numero 10";
+    std::cin>>x;
+    for (int i =0;i>=x;i++)
+    {
+        suma = suma + i;
+    }
+    std::cout<<"La suma es: "<<suma<< "\n\n";
+
+
 // 12. Valcarcel Julian
 // float round(float f, int n)
 
