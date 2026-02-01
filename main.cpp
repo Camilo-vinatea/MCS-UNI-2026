@@ -37,7 +37,7 @@ int main(){
     std::cout << "Demo Cuadros Vargas Ernesto" << std::endl;
     int n = 29;
     if (esPrimo(n))
-        std::cout << n << " es primo\n\n";
+        std::cout << n << " es primo \n\n";
     else
         std::cout << n << " no es primo\n\n";
 
