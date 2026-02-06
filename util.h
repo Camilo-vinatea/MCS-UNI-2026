@@ -15,7 +15,7 @@ void intercambiar(T &a, T &b){
 template <typename T>
 T subtraction (T n, T m){
     return n-m;
-}
+ }
 
 // 4. Lopez Flores Royer Amed
 // multiplication
