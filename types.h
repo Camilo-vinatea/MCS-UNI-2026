@@ -28,5 +28,3 @@ using T1 = long;
 
 // 14. Vinatea Chávez Camilo Jorge
 using T14 = float;
-
-
