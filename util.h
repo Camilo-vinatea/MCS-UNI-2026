@@ -44,6 +44,8 @@ float average(int x, int y);
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
 
+int numero( int n);
+
 // 12. Valcarcel Julian
 // float round(float f, int n)
 
