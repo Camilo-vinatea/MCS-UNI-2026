@@ -38,7 +38,12 @@ bool esPrimo(int &n);
 
 // 9. Segovia Giancarlo
 // fibonacci
-int fibonacci(int n);
+template <typename T>
+T fibonacci(T n){
+    if(n <= 0) return 0;
+    if(n == 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
 
 // 10. Suarez Maciel Susana Isabel
 // average()
