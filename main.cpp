@@ -97,7 +97,7 @@ int main(){
 
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
-  
+  {
     std::cout << "Demo Jhon Tellez Heredia" << std::endl;
     
     // TODO: no ingresar valores
