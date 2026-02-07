@@ -129,7 +129,7 @@ void DemoInicialCuadrosVargas();
 // 7. Miranda Zarate Jorge Luis
 
 // 8. Riveros Guevara
-
+void DemoInicialRiverosGuevara();
 // 9. Segovia Giancarlo
 
 // 10. Suarez Maciel Susana Isabel.

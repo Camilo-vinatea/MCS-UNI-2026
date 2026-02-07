@@ -120,14 +120,7 @@ void DemoInicial(){
 
 // 8. Riveros Guevara
 // IsPrime
-    {
-    std::cout << "Demo Riveros Guevara Hipolito" << std::endl;
-    TH n = 29;
-    if (esPrimo(n))
-        std::cout << n << " es primo \n\n";
-    else
-        std::cout << n << " no es primo\n\n";
-    }
+    DemoInicialRiverosGuevara();
 
 // 9. Segovia Giancarlo
 // fibonacci
@@ -219,7 +212,14 @@ void DemoInicialCuadrosVargas(){
 // 7. Miranda Zarate Jorge Luis
 
 // 8. Riveros Guevara
-
+void DemoInicialRiverosGuevara(){
+    std::cout << "Demo Riveros Guevara Hipolito" << std::endl;
+    TH n = 29;
+    if (esPrimo(n))
+        std::cout << n << " es primo \n\n";
+    else
+        std::cout << n << " no es primo\n\n";
+}
 // 9. Segovia Giancarlo
 
 // 10. Suarez Maciel Susana Isabel.
