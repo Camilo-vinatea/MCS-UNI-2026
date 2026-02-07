@@ -86,20 +86,6 @@ int main(){
 // sumar 10 numeros naturales
   
     std::cout << "Demo Jhon Tellez Heredia" << std::endl;
-
-int SumaPrimero10(int x)
-{
-    
-       int suma = 0;
-       for (int i =0;i<=x;i++)
-       {
-           suma = suma + i;
-           
-       }
-       //std::cout<<"La suma es: "<<suma<< "\n\n";
-   
-return suma;
-    }
     
     // TODO: no ingresar valores
     // TODO: verificar la comparacion
