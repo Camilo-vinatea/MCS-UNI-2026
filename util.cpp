@@ -152,7 +152,7 @@ void DemoInicial(){
     int x;
     x = 10;
 
-    int resultado = 10;//SumaPrimero10(x);
+    int resultado = SumaPrimero10(x);
     std::cout<<"suma: "<<resultado<<std::endl;
     }
 
