@@ -122,10 +122,16 @@ float round(float f, int n)
   
 // 14. Vinatea Chávez Camilo Jorge
     std::cout << "Demo Vinatea Camilo" << std::endl;
-    T14 base = 3.1415; 
-    T1 exponent = 3;
-    T14 result = power(base, exponent);
+
+    T1 base = 3.1415; 
+    T2 exponent = 3;
+    T1 result = power(base, exponent);
     std::cout << base << " ^ " << exponent << " = " << result << "\n\n";
     
-return 0;
+    T2 base2 = 6; 
+    T2 exponent2 = 4;
+    T2 result2 = power(base2, exponent2);
+    std::cout << base2 << " ^ " << exponent2 << " = " << result2 << "\n\n";
+
+    return 0;
 }
