@@ -72,9 +72,9 @@ T fibonacci(T n){
 
 // 10. Suarez Maciel Susana Isabel
 // average()
-template <typename Td>
-ParamDouble average(const Td& a, const Td& b){
-    return (static_cast<ParamDouble>(a) + static_cast<ParamDouble>(b)) / 2.0;
+template <typename T>
+T average(const T& a, const T& b){
+    return ((a + b) / 2.0);
 }
 
 // 11. Tellez Jhon
