@@ -138,11 +138,7 @@ void DemoInicial(){
     }
 // 10. Suarez Maciel Susana Isabel
 // average()
-    {
-    std::cout << "Demo Susana Suarez Maciel" << std::endl;
-    ParamDouble sx = 20, sy = 45;
-    std::cout << "Promedio(x,y)=" << average(sx,sy) << "\n\n";
-    }
+    DemoInicialSusana();
 
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
@@ -223,6 +219,12 @@ void DemoInicialCuadrosVargas(){
 // 9. Segovia Giancarlo
 
 // 10. Suarez Maciel Susana Isabel.
+    void DemoInicialSusana(){
+    std::cout << "Demo Susana Suarez Maciel" << std::endl;
+    ParamDouble sx = 20, sy = 45;
+    std::cout << "Promedio(x,y)=" << average(sx,sy) << "\n\n";
+    }
+
 
 // 11. Tellez Jhon
 
