@@ -84,6 +84,9 @@ int main(){
 
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
+  
+    std::cout << "Demo Jhon Tellez Heredia" << std::endl;
+
 
     int suma = 0;
     std::cout<<"Ingrese el numero 10";
@@ -93,12 +96,13 @@ int main(){
     // TODO: cambiar a ++i
     // TODO: como solo es 1 instruccion, no necesitas {}
     // TODO: suma += i;
-    for (int i =0;i>=x;i++)
-    {
-        suma = suma + i;
-        
-    }
-    std::cout<<"La suma es: "<<suma<< "\n\n";
+    
+        for (int i =0;i>=x;i++)
+        {
+            suma = suma + i;
+            
+        }
+        std::cout<<"La suma es: "<<suma<< "\n\n";
 
 
 // 12. Valcarcel Julian
