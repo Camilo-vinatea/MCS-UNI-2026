@@ -35,10 +35,11 @@ int main(){
 
 // 3. Diaz Tapia Adderly
 // substraction
+    {
     std::cout << "Demo Adderly Díaz Tapia" << std::endl;
     Ts d1 = 10.1; d2=7.2;
     std::cout<<"La resta es: " << subtraction(d1, d2) << "\n\n";
-
+    }
 // 4. Lopez Flores Royer Amed
 // multiplication
     std::cout << "Demo Lopez Flores Royer Amed" << std::endl;
