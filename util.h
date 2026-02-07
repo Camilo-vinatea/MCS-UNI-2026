@@ -72,7 +72,10 @@ T fibonacci(T n){
 
 // 10. Suarez Maciel Susana Isabel
 // average()
-float average(int x, int y);
+template <typename Td>
+ParamDouble average(const Td& a, const Td& b){
+    return (static_cast<ParamDouble>(a) + static_cast<ParamDouble>(b)) / 2.0;
+}
 
 // 11. Tellez Jhon
 // sumar 10 numeros naturales
