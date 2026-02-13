@@ -2,8 +2,13 @@
 using IntParam = int;
 
 // 2. Cuadros-Vargas Ernesto (cambio de Er)
-using T1 = int;
+// #ifdef (__BIG__)
+using T1 = long long;
 using T2 = float;
+// #else
+// using T1 = char;
+// using T2 = double;
+// #endif
 
 // 3. Diaz Tapia Adderly
 using Ts= double;

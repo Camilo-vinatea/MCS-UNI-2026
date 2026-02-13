@@ -46,8 +46,8 @@ void f5(T1 **pp){
 }
 
 void DemoParametros(){
-    T1   x = 10, &r = x; // r es una referencia a x
-    auto y = x+20;
+    T1 x = 10, &r = x; // r es una referencia a x
+    T1 y = x+20;
 
     T1  *pi = &x;
     T1 **pp = &pi;
@@ -86,26 +86,28 @@ void DemoParametros(){
     x = 10; y = x+20;
     f4(pi); // Llama a la función f4 pasando el puntero pi
     aviso("Valor de x después de llamar a f4: ", x);
+    pi = &x;
     aviso("Valor de pi después de llamar a f4: ", pi);
     // *pi = 50; // Esto causará un error de segmentación porque pi ahora es nullptr
     pi = &x; // Restauramos pi para evitar el error
 
     f4(*pp); // pp apunta a pi, *pi apunta a x
+    pi = &x;
     aviso("Valor de x después de llamar a f4: ", x);
     aviso("Valor de pi después de llamar a f4: ", pi);
 
-    pi = &x;
     cout << "f5" <<endl;
     x = 10; y = x+20;
     f5(pp); // Llama a la función f5 pasando el puntero a pi
     aviso("Valor de x después de llamar a f5: ", x);
+    pi = &x;
     aviso("Valor de pi después de llamar a f5: ", pi);
 }
 
 struct S{
     T1   a;
     T2   b;
-    char nom[30];
+    char nom[7];
 };
 
 void PrintS(S &s){
@@ -120,7 +122,7 @@ void PrintT(S *pS){
 }
 
 void DemoEstructuras(){
-    S s1 = {10, 3.14, "Ejemplo"};
+    S s1 = {10, 3.14, "ABC"};
     s1.b = 2.718;
     cout << "Acceso a miembros de la estructura directamente:" << endl;
     cout << "s1.a  : " << s1.a   << endl; // Acceso al miembro a
@@ -145,7 +147,7 @@ void DemoEstructuras(){
     S as[3] = {
         {1, 1.1, "Uno"},
         {2, 2.2, "Dos"},
-        {3, 3.3, "Tres"}
+        {3, 3.3, "Tre"}
     };
     as[0].a = 20; // Modifica el miembro a del primer elemento del arreglo
     cout << "Imprimiendo estructuras en un arreglo (PrintS):" << endl;
@@ -158,10 +160,24 @@ void DemoEstructuras(){
     for(auto &s1 : as)
         PrintS(s1);
     cout << "sizeof(S): " << sizeof(S) << endl;
+    cout << "sizeof(T1): " << sizeof(T1) << endl;
+    cout << "sizeof(T2): " << sizeof(T2) << endl;
+}
+
+void DemoChars(){
+    char c = 'C', d = 65;
+    cout << "Valor de c: " << c << ", Valor de d: " << d << endl;
+    c++; d += 5;
+    cout << "Valor de c: " << c << ", Valor de d: " << d << endl;
+    for (auto i = 'J'; i <= 'P'; ++i)
+        cout << i << " ";
+    cout << endl;
 }
 
 void DemoPunteros(){
     DemoBasico();
     DemoParametros();
     DemoEstructuras();
+    DemoChars();
 }
+
