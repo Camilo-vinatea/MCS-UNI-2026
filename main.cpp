@@ -7,7 +7,7 @@
 // make
 int main(){
     std::cout << "MCS-2026-PM\n";
-    // DemoInicial();
+    //DemoInicial();
     DemoPunteros();
     return 0;
 }

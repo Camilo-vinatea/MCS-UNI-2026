@@ -2,7 +2,7 @@
 using IntParam = int;
 
 // 2. Cuadros-Vargas Ernesto (cambio de Er)
-using T1 = char;
+using T1 = int;
 using T2 = float;
 
 // 3. Diaz Tapia Adderly

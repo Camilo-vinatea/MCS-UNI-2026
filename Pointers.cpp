@@ -13,7 +13,7 @@ void DemoBasico(){
     ptr2 = &x;
     ptr3 = ptr2;
 
-    cout << "Valor de x    : " << x << endl; // Imprime el valor de x
+    cout << "Valor de x    : " << x << endl; // git rImprime el valor de x
     cout << "Direccion de x: " << &x << endl; // Imprime la dirección de x
     cout << "Valor   de ptr: " << ptr << endl; // Imprime la dirección almacenada en ptr (dirección de x)
     cout << "Valor apuntado por ptr: " << *ptr << endl; // Imprime el valor al que apunta ptr (valor de x)
