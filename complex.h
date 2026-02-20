@@ -17,6 +17,19 @@ auto Sumar(Args... args) {
  *        proporciona operaciones básicas como suma,
  *        resta, multiplicación y división.
  */
+
+// Wrapper para número real puro
+struct PureReal {
+    Real value;
+    explicit PureReal(Real v) : value(v) {}
+};
+
+// Wrapper para número imaginario puro
+struct PureImag {
+    Imag value;
+    explicit PureImag(Imag v) : value(v) {}
+};
+
 class Complex{
 private:
     Real m_real; ///< Parte real del número complejo
@@ -188,6 +201,139 @@ public:
     void PrintX(ostream &os) const{
         os << getReal() << " + " << getImag() << "i" << endl;
     }
+
+    // Operadores para PureReal
+    Complex operator+(const PureReal& pr) const {
+        return Complex(getReal() + pr.value, getImag());
+    }
+
+    friend Complex operator+(const PureReal& pr, const Complex& c) {
+        return Complex(c.getReal() + pr.value, c.getImag());
+    }
+
+    Complex& operator+=(const PureReal& pr) {
+        m_real += pr.value;
+        return *this;
+    }
+
+    Complex operator-(const PureReal& pr) const {
+        return Complex(getReal() - pr.value, getImag());
+    }
+
+    friend Complex operator-(const PureReal& pr, const Complex& c) {
+        return Complex(pr.value - c.getReal(), -c.getImag());
+    }
+
+    Complex& operator-=(const PureReal& pr) {
+        m_real -= pr.value;
+        return *this;
+    }
+
+    // Operadores para PureImag
+    Complex operator+(const PureImag& pi) const {
+        return Complex(getReal(), getImag() + pi.value);
+    }
+
+    friend Complex operator+(const PureImag& pi, const Complex& c) {
+        return Complex(c.getReal(), c.getImag() + pi.value);
+    }
+
+    Complex& operator+=(const PureImag& pi) {
+        m_imag += pi.value;
+        return *this;
+    }
+
+    Complex operator-(const PureImag& pi) const {
+        return Complex(getReal(), getImag() - pi.value);
+    }
+
+    friend Complex operator-(const PureImag& pi, const Complex& c) {
+        return Complex(-c.getReal(), pi.value - c.getImag());
+    }
+
+    Complex& operator-=(const PureImag& pi) {
+        m_imag -= pi.value;
+        return *this;
+    }
+
+    // Multiplicación: Complex * Real
+    Complex operator*(Real scalar) const {
+        return Complex(getReal() * scalar, getImag() * scalar);
+    }
+
+    // Multiplicación: Real * Complex (conmutativa)
+    friend Complex operator*(Real scalar, const Complex& c) {
+        return Complex(c.getReal() * scalar, c.getImag() * scalar);
+    }
+
+    // División: Complex / Real
+    Complex operator/(Real scalar) const {
+        if (scalar == 0) {
+            throw invalid_argument("Division by zero");
+        }
+        return Complex(getReal() / scalar, getImag() / scalar);
+    }
+
+    // Operadores compuestos con escalares
+    Complex& operator*=(Real scalar) {
+        m_real *= scalar;
+        m_imag *= scalar;
+        return *this;
+    }
+
+    Complex& operator/=(Real scalar) {
+        if (scalar == 0) {
+            throw invalid_argument("Division by zero");
+        }
+        m_real /= scalar;
+        m_imag /= scalar;
+        return *this;
+    }
+    // ============================================
+    // OPERADORES CON ESCALARES DIRECTOS
+    // (Para casos como: 5 - c, 10 / c, etc.)
+    // ============================================
+    
+    // Suma: Complex + Real
+    Complex operator+(Real r) const {
+        return Complex(getReal() + r, getImag());
+    }
+
+    // Suma: Real + Complex
+    friend Complex operator+(Real r, const Complex& c) {
+        return Complex(c.getReal() + r, c.getImag());
+    }
+
+    // Resta: Complex - Real
+    Complex operator-(Real r) const {
+        return Complex(getReal() - r, getImag());
+    }
+
+    // Resta: Real - Complex
+    friend Complex operator-(Real r, const Complex& c) {
+        return Complex(r - c.getReal(), -c.getImag());
+    }
+
+    // Operadores compuestos
+    Complex& operator+=(Real r) {
+        m_real += r;
+        return *this;
+    }
+
+    Complex& operator-=(Real r) {
+        m_real -= r;
+        return *this;
+    }
+
+    // División: Real / Complex
+    friend Complex operator/(Real scalar, const Complex& c) {
+        Real denom = c.getReal() * c.getReal() + c.getImag() * c.getImag();
+        if (denom == 0) {
+            throw invalid_argument("Division by zero");
+        }
+        return Complex((scalar * c.getReal()) / denom, 
+                       -(scalar * c.getImag()) / denom);
+    }
 };
 
 inline ostream &operator<<(ostream &os, const Complex &c){
@@ -217,6 +363,24 @@ inline istream &operator>>(istream &is, Complex &c){
 // inline Complex operator"" r(long double r) { ///< Literal para números reales (entero)
 //     return Complex(static_cast<Real>(r), 0.0);
 // }
+
+// Literal para imaginarios puros
+inline Complex operator"" _i(long double i) {
+    return Complex(0.0, static_cast<Imag>(i));
+}
+
+inline Complex operator"" _i(unsigned long long i) {
+    return Complex(0.0, static_cast<Imag>(i));
+}
+
+// Literal para reales puros (opcional, ya funciona con el constructor)
+inline Complex operator"" _r(long double r) {
+    return Complex(static_cast<Real>(r), 0.0);
+}
+
+inline Complex operator"" _r(unsigned long long r) {
+    return Complex(static_cast<Real>(r), 0.0);
+}
 
 void DemoComplex();
 

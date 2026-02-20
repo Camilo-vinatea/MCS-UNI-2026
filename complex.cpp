@@ -120,6 +120,22 @@ void DemoComplex(){
     Real realNum = -6.5;
     c1 = c2 + realNum; // Suma de complejo con numero real
     cout << c2 << " + " << realNum << " = " << c1 << endl;
+    cout << endl;
+
+    cout << "\nDemo de literales:" << endl;
+    Complex c8(3,-6);
+    cout << "c8 = " << c8 << endl;
+    c8 += 6_i; // Suma de complejo con numero imaginario usando literal
+    cout << "c8 + 6_i = " << c8 << endl;
+    c8 -= 3_r; // Suma de complejo con numero real usando literal
+    cout << "c8 - 3_r = " << c8 << endl;
+    Complex c9(1, 2);
+    cout << "c9 = " << c9 << endl;
+    c9 = c9/2_i;
+    cout << "c9/2i = " << c9 << endl;
+    Complex c10 = 4_r - 5_i; // Creación de complejo usando literales
+    c10.PrintX(cout);
+    cout << endl;
 
     cout << "Destruyendo objeto dinámico:" << endl;
     delete pC; // Llama al destructor para liberar la memoria asignada a pC
