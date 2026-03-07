@@ -85,5 +85,5 @@ istream &operator>>(istream &is, XVector<Traits> &v){
 }
 
 void DemoVector();
-
+q
 #endif // __XVECTOR_H__
